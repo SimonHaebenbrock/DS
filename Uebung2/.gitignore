@@ -1,0 +1,8 @@
+# Framework-Quellcode und IDE
+/sim4da/
+/.idea/
+# (optional) Build-Ordner, Logs
+/target/
+/bin/
+*.log
+.DS_Store

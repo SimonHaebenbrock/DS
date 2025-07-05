@@ -1,5 +1,8 @@
 /Uebung1/
 /simulator/
+# Übung2: Framework und IDE ausblenden
+/Uebung2/sim4da/
+/Uebung2/.idea/
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
