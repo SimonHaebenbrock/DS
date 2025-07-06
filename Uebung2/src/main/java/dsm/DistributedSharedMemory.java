@@ -1,4 +1,4 @@
-package main.java.org.oxoo2a.dsm;
+package main.java.dsm;
 
 /**
  * Einfaches Key-Value-Interface für die drei CAP-Varianten.

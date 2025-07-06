@@ -1,0 +1,64 @@
+=== DSM-Simulation Ergebnisse ===
+Zeitstempel: 06.07.2025 18:36:38
+
+
+DSM-Simulation mit 5 Knoten und 5 Iterationen
+CAP-Theorem Demonstration
+
+
+=== Test: AP (Availability & Partition Tolerance) ===
+[AP] INKONSISTENZ ERKANNT: Zähler counter_node0 ist zurückgesprungen von 2 auf 1
+[AP] INKONSISTENZ ERKANNT: Zähler counter_node1 ist zurückgesprungen von 1 auf 0
+[AP] INKONSISTENZ ERKANNT: Zähler counter_node0 ist zurückgesprungen von 3 auf 2
+[AP] Knoten node0: 28 Lese-Operationen, 4 Schreib-Operationen, 2 Inkonsistenzen erkannt
+[AP] Knoten node1: 26 Lese-Operationen, 2 Schreib-Operationen, 1 Inkonsistenzen erkannt
+[AP] Knoten node2: 27 Lese-Operationen, 3 Schreib-Operationen, 0 Inkonsistenzen erkannt
+[AP] Knoten node3: 27 Lese-Operationen, 3 Schreib-Operationen, 0 Inkonsistenzen erkannt
+[AP] Knoten node4: 29 Lese-Operationen, 5 Schreib-Operationen, 0 Inkonsistenzen erkannt
+
+[AP] ZUSAMMENFASSUNG:
+[AP] Gesamtzahl Leseoperationen: 137
+[AP] Gesamtzahl Schreiboperationen: 17
+[AP] Gesamtzahl erkannter Inkonsistenzen: 3
+[AP] Lese-Schreib-Verhältnis: 8,06
+[AP] Operationen pro Knoten: 30
+[AP] BESTÄTIGT: 3 Inkonsistenzen festgestellt (typisch für AP-Systeme).
+
+
+=== Test: CP (Consistency & Partition Tolerance) ===
+[CP] Knoten node0: 29 Lese-Operationen, 5 Schreib-Operationen, 0 Inkonsistenzen erkannt
+[CP] Knoten node1: 29 Lese-Operationen, 5 Schreib-Operationen, 0 Inkonsistenzen erkannt
+[CP] Knoten node2: 27 Lese-Operationen, 3 Schreib-Operationen, 0 Inkonsistenzen erkannt
+[CP] Knoten node3: 27 Lese-Operationen, 3 Schreib-Operationen, 0 Inkonsistenzen erkannt
+[CP] Knoten node4: 28 Lese-Operationen, 4 Schreib-Operationen, 0 Inkonsistenzen erkannt
+
+[CP] ZUSAMMENFASSUNG:
+[CP] Gesamtzahl Leseoperationen: 140
+[CP] Gesamtzahl Schreiboperationen: 20
+[CP] Gesamtzahl erkannter Inkonsistenzen: 0
+[CP] Lese-Schreib-Verhältnis: 7,00
+[CP] Operationen pro Knoten: 32
+[CP] BESTÄTIGT: Keine Inkonsistenzen (Konsistenz garantiert).
+
+
+=== Test: CA (Consistency & Availability) ===
+[CA] Knoten node0: 17 Lese-Operationen, 2 Schreib-Operationen, 0 Inkonsistenzen erkannt
+[CA] Knoten node1: 17 Lese-Operationen, 2 Schreib-Operationen, 0 Inkonsistenzen erkannt
+[CA] Knoten node2: 26 Lese-Operationen, 2 Schreib-Operationen, 0 Inkonsistenzen erkannt
+[CA] Knoten node3: 16 Lese-Operationen, 1 Schreib-Operationen, 0 Inkonsistenzen erkannt
+[CA] Knoten node4: 26 Lese-Operationen, 2 Schreib-Operationen, 0 Inkonsistenzen erkannt
+
+[CA] ZUSAMMENFASSUNG:
+[CA] Gesamtzahl Leseoperationen: 102
+[CA] Gesamtzahl Schreiboperationen: 9
+[CA] Gesamtzahl erkannter Inkonsistenzen: 0
+[CA] Lese-Schreib-Verhältnis: 11,33
+[CA] Operationen pro Knoten: 22
+[CA] BESTÄTIGT: Keine Inkonsistenzen (Konsistenz garantiert).
+
+
+=== Fazit ===
+CAP-Theorem demonstriert:
+- AP: Verfügbar, aber inkonsistent
+- CP: Konsistent, aber blockiert bei Partitionen
+- CA: Konsistent und verfügbar ohne Partitionen
